@@ -5,7 +5,7 @@ PKG_CONFIG ?= pkg-config
 CFLAGS     += -std=gnu99 -lconfig -D_GNU_SOURCE -fcommon
 CFLAGS     += `$(PKG_CONFIG) --cflags libconfig`
 LDLIBS     += `$(PKG_CONFIG) --libs libconfig`
-LDFLAGS     = -ltermcap -z now
+LDFLAGS     = -ltermcap -z now -lncurses
 BIN         = lsmount
 OBJ         = lsmount.o lsmgrid.o options.o lsmcolors.o helper.o
 VPATH       = src
